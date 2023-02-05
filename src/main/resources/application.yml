@@ -1,0 +1,27 @@
+spring:
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: daint.dev@gmail.com
+    password: qeddvhignutlznbh
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
+    test-connection: false
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
+application:
+  authentication:
+    redis:
+      otp_time_out: 3
+  email:
+    from: ${SPRING_EMAIL_FROM:}
+
